@@ -3,12 +3,12 @@ apply plugin: 'com.android.library'
 version = "1.1.4"
 
 android {
-    compileSdkVersion 22
+    compileSdkVersion 19
     buildToolsVersion '22.0.1'
 
     defaultConfig {
-        minSdkVersion 11
-        targetSdkVersion 22
+        minSdkVersion 14
+        targetSdkVersion 19
         versionCode 114
         versionName version
     }
@@ -22,8 +22,6 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:22.2.0'
+    compile 'net.datafans:androidsupportv4:1.0.2'
 }
-
-
-apply from: "upload.gradle"
+apply from: 'bintray-publish-github.gradle'

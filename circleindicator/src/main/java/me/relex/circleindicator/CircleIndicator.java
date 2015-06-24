@@ -124,8 +124,8 @@ public class CircleIndicator extends LinearLayout implements OnPageChangeListene
         mViewpager = viewPager;
         mCurrentPosition = mViewpager.getCurrentItem();
         createIndicators(viewPager);
-        mViewpager.removeOnPageChangeListener(this);
-        mViewpager.addOnPageChangeListener(this);
+        //mViewpager.removeOnPageChangeListener(this);
+        mViewpager.setOnPageChangeListener(this);
         onPageSelected(mCurrentPosition);
     }
 
@@ -136,8 +136,8 @@ public class CircleIndicator extends LinearLayout implements OnPageChangeListene
         if (mViewpager == null) {
             throw new NullPointerException("can not find Viewpager , setViewPager first");
         }
-        mViewpager.removeOnPageChangeListener(onPageChangeListener);
-        mViewpager.addOnPageChangeListener(onPageChangeListener);
+        //mViewpager.removeOnPageChangeListener(onPageChangeListener);
+        mViewpager.setOnPageChangeListener(onPageChangeListener);
     }
 
     @Override
